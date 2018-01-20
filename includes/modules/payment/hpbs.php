@@ -32,7 +32,7 @@ class hpbs
         $this->order_status = MODULE_PAYMENT_HPBS_NEWORDER_STATUS_ID;
         $this->hp = new heidelpay();
         $this->hp->actualPaymethod = strtoupper($this->payCode);
-        $this->version = $hp->version;
+        $this->version = $this->hp->version;
         
         if (is_object($order)) {
             $this->update_status();
